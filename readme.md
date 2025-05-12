@@ -23,15 +23,16 @@ To run this project locally, follow these steps:
 
    ```bash
    git clone https://github.com/AlexAlgarate/wedding_miguel_patri.git
+   ```
 
-### 1. Create the project directory
+### 2. Create the project directory
 
 ```cmd
 mkdir my_app_name
 cd my_app_name
 ```
 
-### 2. Setup virtual environment
+### 3. Setup virtual environment
 
 Linux:
 
@@ -47,7 +48,7 @@ python -m venv .venv
 .venv\Scripts\activate
 ```
 
-### 3. Install Reflex package
+### 4. Install Reflex package
 
 Reflex is available as a pip package.
 
@@ -55,13 +56,13 @@ Reflex is available as a pip package.
 pip install reflex
 ```
 
-### 4. Initialize the project
+### 5. Initialize the project
 
 ```cmd
 reflex init
 ```
 
-### 5. Run the App
+### 6. Run the App
 
 ```cmd
 reflex run
@@ -71,6 +72,8 @@ reflex run
 
 To deploy the project, I use *[Vercel](https://vercel.com/)*, but you can also use the service provided by Reflex (*[see the documentation here](https://reflex.dev/docs/hosting/self-hosting/#exporting-a-static-build)*).
 I have automated the deployment process with a GitHub Action following Reflex's instructions for exporting the frontend. If you want to add states and backend functionality, you should review this point as Vercel doesn't handle Python code well (an alternative is *[Railway](https://railway.app/)*).
+
+This is the bash shell script that Github Action uses to create the /public folder that Vercel needs to deploy the static page:
 
 ```sh
 python3 -m venv .venv
